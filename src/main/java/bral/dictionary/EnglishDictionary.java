@@ -42,9 +42,7 @@ public class EnglishDictionary {
                 // dictionaryMap.get(word).add(type);
                 // add definition to the list:
                 dictionaryMap.get(word).add(definition);
-            }
-            else
-            {
+            } else {
                 List<String> definitions = new ArrayList<>();
                 definitions.add(definition);
                 dictionaryMap.put(word, definitions);
