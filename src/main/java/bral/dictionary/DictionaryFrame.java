@@ -10,10 +10,15 @@ import java.util.List;
 
 public class DictionaryFrame extends JFrame
 {
+
     private final EnglishDictionary englishDictionary = new EnglishDictionary();
+
     private final DefinitionsComponent definitionsComponent;
+
     private JTextField searchField;
+
     private JTextArea definitionsTextArea;
+
     public DictionaryFrame() throws CsvValidationException, IOException
     {
         setSize(1000, 800);
@@ -36,14 +41,11 @@ public class DictionaryFrame extends JFrame
         definitionsTextArea.setEditable(false);
         definitionsTextArea.setLineWrap(true);
         definitionsTextArea.setWrapStyleWord(true);
-//        definitionsTextArea.setPreferredSize();
         main.add(definitionsTextArea, BorderLayout.CENTER);
 
         JScrollPane scrollPane = new JScrollPane(definitionsTextArea);
-//        scrollPane.setPreferredSize(new Dimension(1000, 800));
         main.add(scrollPane, BorderLayout.CENTER);
 
-//        main.add(definitionsTextArea, BorderLayout.CENTER);
 
         // redisplay as user enters new word:
         /*searchField.getDocument().addDocumentListener((SimpleDocumentListener) e -> reDisplay());
@@ -81,7 +83,7 @@ public class DictionaryFrame extends JFrame
             String currWord = searchField.getText();
             // update the definitionsComponent based on the current word:
             List<String> currDefinitions = englishDictionary.getDefinition(currWord);
-//            definitionsComponent.setCurrDefinitions(currDefinitions);
+            // definitionsComponent.setCurrDefinitions(currDefinitions);
 
             // clear the old contents:
             definitionsTextArea.setText("");

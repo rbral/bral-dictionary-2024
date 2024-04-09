@@ -6,12 +6,12 @@ import java.util.List;
 
 public class DefinitionsComponent extends JComponent
 {
-//    private final EnglishDictionary englishDictionary;
+    //private final EnglishDictionary englishDictionary;
     private List<String> currDefinitions;
 
     public DefinitionsComponent(java.util.List<String> currDefinitions)
     {
-//        this.englishDictionary = englishDictionary;
+        //this.englishDictionary = englishDictionary;
         this.currDefinitions = currDefinitions;
     }
 

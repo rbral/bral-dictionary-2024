@@ -31,7 +31,7 @@ public class EnglishDictionary {
         while ((record = reader.readNext()) != null) {
             // record is ONE line of the CSV
             String word = record[0].trim().toLowerCase();
-//            String type = record[1].trim();
+            // String type = record[1].trim();
             String definition = record[2].trim();
 
             // add each to the dictionary:
@@ -39,7 +39,7 @@ public class EnglishDictionary {
             if (dictionaryMap.containsKey(word))
             {
                 // add type to the list:
-//                dictionaryMap.get(word).add(type);
+                // dictionaryMap.get(word).add(type);
                 // add definition to the list:
                 dictionaryMap.get(word).add(definition);
             }
@@ -50,11 +50,6 @@ public class EnglishDictionary {
                 dictionaryMap.put(word, definitions);
             }
 
-            /*for (String cell : record)
-            {
-                System.out.print(cell + "\t");
-            }
-            System.out.println();*/
         }
 
         reader.close();
