@@ -16,10 +16,11 @@ class EnglishDictionaryTest {
         EnglishDictionary dictionary = new EnglishDictionary();
 
         // when
-        List<String> definitions = dictionary.getDefinition("");
+        List<String> definitions = dictionary.getDefinition("Aaronic");
+        String firstDef = definitions.get(0);
 
         // then
-//        assert...
+        assertEquals("Alt. of Aaronical", firstDef);
     }
 
 }
