@@ -13,7 +13,6 @@ public class DictionaryFrame extends JFrame
 
     private final EnglishDictionary englishDictionary = new EnglishDictionary();
 
-    private final DefinitionsComponent definitionsComponent;
 
     private JTextField searchField;
 
@@ -31,8 +30,6 @@ public class DictionaryFrame extends JFrame
         // tells the JFrame to use this JPanel
         setContentPane(main);
 
-        definitionsComponent = new DefinitionsComponent(englishDictionary.getDefinition(""));
-        add(definitionsComponent, BorderLayout.CENTER);
 
         searchField = new JTextField("");
         main.add(searchField, BorderLayout.NORTH);
@@ -72,7 +69,6 @@ public class DictionaryFrame extends JFrame
             String currWord = searchField.getText();
             // update the definitionsComponent based on the current word:
             List<String> currDefinitions = englishDictionary.getDefinition(currWord);
-            // definitionsComponent.setCurrDefinitions(currDefinitions);
 
             // clear the old contents:
             definitionsTextArea.setText("");
