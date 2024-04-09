@@ -68,9 +68,7 @@ public class DictionaryFrame extends JFrame
 
     private void reDisplay()
     {
-        try
-        {
-
+        try {
             String currWord = searchField.getText();
             // update the definitionsComponent based on the current word:
             List<String> currDefinitions = englishDictionary.getDefinition(currWord);
@@ -82,9 +80,7 @@ public class DictionaryFrame extends JFrame
             {
                 definitionsTextArea.append(definition + "\n\n");
             }
-        }
-        catch (NullPointerException e)
-        {
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
 
