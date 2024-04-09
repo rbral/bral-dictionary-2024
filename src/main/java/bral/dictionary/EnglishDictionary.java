@@ -17,6 +17,10 @@ import java.util.Map;
 public class EnglishDictionary {
     private final Map<String, List<String>> dictionaryMap;
 
+    public Map<String, List<String>> getDictionaryMap() {
+        return dictionaryMap;
+    }
+
     public EnglishDictionary() throws CsvValidationException, IOException
     {
         dictionaryMap = new HashMap<>();

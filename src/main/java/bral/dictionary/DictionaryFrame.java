@@ -65,19 +65,18 @@ public class DictionaryFrame extends JFrame
 
     private void reDisplay()
     {
-        try {
-            String currWord = searchField.getText();
-            // update the definitionsComponent based on the current word:
-            List<String> currDefinitions = englishDictionary.getDefinition(currWord);
+        // clear the old contents:
+        definitionsTextArea.setText("");
 
-            // clear the old contents:
-            definitionsTextArea.setText("");
+        String currWord = searchField.getText();
+
+        if (englishDictionary.getDictionaryMap().containsKey(currWord))
+        {
+            List<String> currDefinitions = englishDictionary.getDefinition(currWord);
             for (String definition : currDefinitions)
             {
                 definitionsTextArea.append(definition + "\n\n");
             }
-        } catch (NullPointerException e) {
-            e.printStackTrace();
         }
 
     }
