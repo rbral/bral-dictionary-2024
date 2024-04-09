@@ -24,22 +24,6 @@ public class DefinitionsComponent extends JComponent
         g.fillRect(0, 0, getWidth(), getHeight());
 
         g.setColor(Color.BLACK);
-
-        /*
-        Please note:
-        comments will be deleted; they are only here to show
-        the effort I invested.
-
-        for (String definition : currDefinitions)
-        {
-            g.drawString(definition);
-        }*/
     }
-
-    /*public void setCurrDefinitions(java.util.List<String> currDefinitions)
-    {
-        this.currDefinitions = currDefinitions;
-        repaint();
-    }*/
 
 }

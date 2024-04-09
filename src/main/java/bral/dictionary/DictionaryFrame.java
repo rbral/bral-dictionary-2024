@@ -46,15 +46,6 @@ public class DictionaryFrame extends JFrame
         JScrollPane scrollPane = new JScrollPane(definitionsTextArea);
         main.add(scrollPane, BorderLayout.CENTER);
 
-
-        // redisplay as user enters new word:
-        /*searchField.getDocument().addDocumentListener((SimpleDocumentListener) e -> reDisplay());
-        searchField.getDocument().addDocumentListener(new SimpleDocumentListener() {
-            @Override
-            public void update(DocumentEvent e) {
-                reDisplay();
-            }
-        });*/
         searchField.getDocument().addDocumentListener((new DocumentListener() {
             @Override
             public void insertUpdate(DocumentEvent e) {
