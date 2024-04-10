@@ -38,10 +38,7 @@ public class DictionaryFrame extends JFrame
         definitionsTextArea.setEditable(false);
         definitionsTextArea.setLineWrap(true);
         definitionsTextArea.setWrapStyleWord(true);
-        main.add(definitionsTextArea);
-
-        JScrollPane scrollPane = new JScrollPane(definitionsTextArea);
-        main.add(scrollPane);
+        main.add(definitionsTextArea, BorderLayout.CENTER);
 
         searchField.getDocument().addDocumentListener((new DocumentListener() {
             @Override
