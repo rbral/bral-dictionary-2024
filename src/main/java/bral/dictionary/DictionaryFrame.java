@@ -41,7 +41,7 @@ public class DictionaryFrame extends JFrame
         main.add(definitionsTextArea, BorderLayout.CENTER);
 
         JScrollPane scrollPane = new JScrollPane(definitionsTextArea);
-        main.add(scrollPane, BorderLayout.CENTER);
+        main.add(scrollPane);
 
         searchField.getDocument().addDocumentListener((new DocumentListener() {
             @Override
