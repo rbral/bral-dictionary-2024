@@ -60,11 +60,21 @@ public class EnglishDictionary {
     /**
      *
      * @param word to look up
-     * @return a list of defenitions or an empty list if the word doesn't exist
+     * @return a list of definitions or an empty list if the word doesn't exist
      */
     public List<String> getDefinition(String word)
     {
         word = word.trim().toLowerCase();
-        return dictionaryMap.get(word);
+
+        if (dictionaryMap.containsKey(word))
+        {
+            return dictionaryMap.get(word);
+        } else
+        {
+            List<String> emptyList = new ArrayList<>();
+            return emptyList;
+        }
+
+
     }
 }

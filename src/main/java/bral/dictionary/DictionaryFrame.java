@@ -67,18 +67,12 @@ public class DictionaryFrame extends JFrame
     {
         // clear the old contents:
         definitionsTextArea.setText("");
-
         String currWord = searchField.getText();
-
-        if (englishDictionary.getDictionaryMap().containsKey(currWord))
+        List<String> currDefinitions = englishDictionary.getDefinition(currWord);
+        for (String definition : currDefinitions)
         {
-            List<String> currDefinitions = englishDictionary.getDefinition(currWord);
-            for (String definition : currDefinitions)
-            {
-                definitionsTextArea.append(definition + "\n\n");
-            }
+            definitionsTextArea.append(definition + "\n\n");
         }
-
     }
 
 }
