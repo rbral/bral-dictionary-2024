@@ -38,7 +38,7 @@ public class DictionaryFrame extends JFrame
         definitionsTextArea.setEditable(false);
         definitionsTextArea.setLineWrap(true);
         definitionsTextArea.setWrapStyleWord(true);
-        main.add(definitionsTextArea, BorderLayout.CENTER);
+        main.add(definitionsTextArea);
 
         JScrollPane scrollPane = new JScrollPane(definitionsTextArea);
         main.add(scrollPane);
