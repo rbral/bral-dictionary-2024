@@ -12,13 +12,13 @@ class EnglishDictionaryTest {
 
     @Test
     public void getDefinition() throws CsvValidationException, IOException {
-        // given
+        // given:
         EnglishDictionary dictionary = new EnglishDictionary();
 
-        // when
+        // when:
         List<String> definitions = dictionary.getDefinition("Aback");
 
-        // then
+        // then:
         assertEquals("Toward the back or rear; backward.", definitions.get(0));
         assertEquals("Behind; in the rear.", definitions.get(1));
         assertEquals("Backward against the mast; -- said of the sails when pressed by the wind.", definitions.get(2));
